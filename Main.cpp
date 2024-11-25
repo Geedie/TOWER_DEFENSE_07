@@ -61,55 +61,7 @@ void drawScreen(vector<Enemy>& enemies, Tower& tower, const vector<pair<int, int
     screenMutex.unlock();
 }
 
-//void checkCollisions(vector<Enemy>& enemies, Tower& tower) {
-//    vector<size_t> bulletsToRemove; // Chỉ số của các đạn cần xóa
-//    vector<size_t> enemiesToRemove; // Chỉ số của các kẻ địch cần xóa
-//    
-//    for (size_t i = 0; i < tower.Bullets().size(); i++) {
-//        Bullet& bullet = tower.Bullets()[i];
-//        for (size_t j = 0; j < enemies.size(); j++) {
-//            Enemy& enemy = enemies[j];
-//
-//            setCursorPosition(5, 6);
-//            cout << static_cast<int>(tower.Bullets()[0].XBull()) << ", " << static_cast<int>(tower.Bullets()[0].YBull());
-//
-//            setCursorPosition(5, 7);
-//            cout << enemy.XEne() << ", " << enemy.YEne();
-//
-//
-//            int xbull = static_cast<int>(bullet.XBull());
-//            int ybull = static_cast<int>(bullet.YBull());
-//
-//            int dx = abs(enemy.XEne() - bullet.XBull());
-//            int dy = abs(enemy.YEne() - bullet.YBull());
-//            // Kiểm tra va chạm giữa đạn và kẻ địch
-//            if (enemy.getAlive() && dx <= 1 && dy <= 1) {
-//                setCursorPosition(5, 5);
-//                cout << "hit";
-//                
-//                enemy.reduceHealth(bullet.Damage()); // Gây sát thương cho kẻ địch
-//                if (!enemy.getAlive()) {
-//                    // Nếu kẻ địch chết, đánh dấu để xóa
-//                    clearOldPosition(enemy.XEne(), enemy.YEne()); // Xóa trên màn hình
-//                    enemiesToRemove.push_back(j);
-//                }
-//                // Đánh dấu đạn để xóa sau va chạm
-//                bulletsToRemove.push_back(i);
-//                break;
-//            }
-//        }
-//    }
-//
-//    // Xóa các viên đạn đã va chạm
-//    for (auto it = bulletsToRemove.rbegin(); it != bulletsToRemove.rend(); ++it) {
-//        tower.Bullets().erase(tower.Bullets().begin() + *it);
-//    }
-//
-//    // Xóa các kẻ địch đã chết
-//    for (auto it = enemiesToRemove.rbegin(); it != enemiesToRemove.rend(); ++it) {
-//        enemies.erase(enemies.begin() + *it);
-//    }
-//}
+
 
 void checkCollisions(vector<Enemy>& enemies, Tower& tower) {
     vector<Bullet> bullets = tower.Bullets();
