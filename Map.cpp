@@ -1,19 +1,13 @@
 ﻿#include "Map.h"
 
-void Map::ResizeConsole(int row, int col) {
-    // Lấy handle của console
-    HWND console = GetConsoleWindow();
-    RECT r;
-    GetWindowRect(console, &r); // Lấy kích thước hiện tại của console
+void Map::DisplayMap(int n) {
+    wifstream file;
 
-    // Điều chỉnh kích thước console
-    MoveWindow(console, r.left, r.top, row, col, TRUE);
-}
-
-void Map::DisplayMap1() {
-    wifstream file("map1.txt");  // Mở file map.txt
-
-    // Kiểm tra nếu file mở thành công
+    // Mở file tương ứng với giá trị của n
+    if (n == 1) { file.open(L"map1.txt"); }
+    else if (n == 2) { file.open(L"map2.txt"); }
+    else if (n == 3) { file.open(L"map3.txt"); }
+    else if (n == 4) { file.open(L"map4.txt"); }
     if (!file.is_open()) {
         cerr << "Không thể mở file map.txt" << endl;
         return;
