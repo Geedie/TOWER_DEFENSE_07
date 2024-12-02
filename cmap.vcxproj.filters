@@ -15,66 +15,134 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="map2.txt">
+    <Media Include="resource files\BgSound.wav">
       <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="map1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    </Media>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="header files\Bullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cpoint.h">
+    <ClInclude Include="header files\consoleHandle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ctool.h">
+    <ClInclude Include="header files\ConsoleSetting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
+    <ClInclude Include="header files\cpoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
+    <ClInclude Include="header files\ctool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tower.h">
+    <ClInclude Include="header files\ctower.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConsoleSetting.h">
+    <ClInclude Include="header files\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="oclConsole.h">
+    <ClInclude Include="header files\Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\Music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\ReadMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\Setting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\Tower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header files\Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Map.cpp">
+    <Text Include="resource files\BackgroundMusic.txt" />
+    <Text Include="resource files\BackToMenu.txt" />
+    <Text Include="resource files\EasyTitle.txt" />
+    <Text Include="resource files\Exit.txt" />
+    <Text Include="resource files\GameModeTitle.txt" />
+    <Text Include="resource files\Graphics.txt" />
+    <Text Include="resource files\HardTitle.txt" />
+    <Text Include="resource files\map1.txt" />
+    <Text Include="resource files\map2.txt" />
+    <Text Include="resource files\map3.txt" />
+    <Text Include="resource files\map4.txt" />
+    <Text Include="resource files\Menu.txt" />
+    <Text Include="resource files\Music.txt" />
+    <Text Include="resource files\MusicTitle.txt" />
+    <Text Include="resource files\NormalTitle.txt" />
+    <Text Include="resource files\OffOption.txt" />
+    <Text Include="resource files\OnOption.txt" />
+    <Text Include="resource files\output.txt" />
+    <Text Include="resource files\PlayNewTitle.txt" />
+    <Text Include="resource files\PlayOpt.txt" />
+    <Text Include="resource files\PlayRecentTitle.txt" />
+    <Text Include="resource files\PlayTitle.txt" />
+    <Text Include="resource files\RankingTitle.txt" />
+    <Text Include="resource files\RankOpt.txt" />
+    <Text Include="resource files\Setting.txt" />
+    <Text Include="resource files\SettingOpt.txt" />
+    <Text Include="resource files\UserFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source files\Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="source files\consoleHandle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ctool.cpp">
+    <ClCompile Include="source files\ConsoleSetting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cpoint.cpp">
+    <ClCompile Include="source files\cpoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tower.cpp">
+    <ClCompile Include="source files\ctool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
+    <ClCompile Include="source files\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleSetting.cpp">
+    <ClCompile Include="source files\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MouseControl.cpp">
+    <ClCompile Include="source files\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
+    <ClCompile Include="source files\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source files\MouseControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\Music.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\ReadMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\Setting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\Tower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\UI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

@@ -18,6 +18,75 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="resource files\BgSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header files\Account.h" />
+    <ClInclude Include="header files\Bullet.h" />
+    <ClInclude Include="header files\consoleHandle.h" />
+    <ClInclude Include="header files\ConsoleSetting.h" />
+    <ClInclude Include="header files\cpoint.h" />
+    <ClInclude Include="header files\ctool.h" />
+    <ClInclude Include="header files\ctower.h" />
+    <ClInclude Include="header files\Enemy.h" />
+    <ClInclude Include="header files\Map.h" />
+    <ClInclude Include="header files\Menu.h" />
+    <ClInclude Include="header files\Music.h" />
+    <ClInclude Include="header files\ReadMap.h" />
+    <ClInclude Include="header files\Setting.h" />
+    <ClInclude Include="header files\Tower.h" />
+    <ClInclude Include="header files\UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resource files\BackgroundMusic.txt" />
+    <Text Include="resource files\BackToMenu.txt" />
+    <Text Include="resource files\EasyTitle.txt" />
+    <Text Include="resource files\Exit.txt" />
+    <Text Include="resource files\GameModeTitle.txt" />
+    <Text Include="resource files\Graphics.txt" />
+    <Text Include="resource files\HardTitle.txt" />
+    <Text Include="resource files\map1.txt" />
+    <Text Include="resource files\map2.txt" />
+    <Text Include="resource files\map3.txt" />
+    <Text Include="resource files\map4.txt" />
+    <Text Include="resource files\Menu.txt" />
+    <Text Include="resource files\Music.txt" />
+    <Text Include="resource files\MusicTitle.txt" />
+    <Text Include="resource files\NormalTitle.txt" />
+    <Text Include="resource files\OffOption.txt" />
+    <Text Include="resource files\OnOption.txt" />
+    <Text Include="resource files\output.txt" />
+    <Text Include="resource files\PlayNewTitle.txt" />
+    <Text Include="resource files\PlayOpt.txt" />
+    <Text Include="resource files\PlayRecentTitle.txt" />
+    <Text Include="resource files\PlayTitle.txt" />
+    <Text Include="resource files\RankingTitle.txt" />
+    <Text Include="resource files\RankOpt.txt" />
+    <Text Include="resource files\Setting.txt" />
+    <Text Include="resource files\SettingOpt.txt" />
+    <Text Include="resource files\UserFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source files\Bullet.cpp" />
+    <ClCompile Include="source files\consoleHandle.cpp" />
+    <ClCompile Include="source files\ConsoleSetting.cpp" />
+    <ClCompile Include="source files\cpoint.cpp" />
+    <ClCompile Include="source files\ctool.cpp" />
+    <ClCompile Include="source files\Enemy.cpp" />
+    <ClCompile Include="source files\Main.cpp" />
+    <ClCompile Include="source files\Map.cpp" />
+    <ClCompile Include="source files\Menu.cpp" />
+    <ClCompile Include="source files\MouseControl.cpp" />
+    <ClCompile Include="source files\Music.cpp" />
+    <ClCompile Include="source files\ReadMap.cpp" />
+    <ClCompile Include="source files\Setting.cpp" />
+    <ClCompile Include="source files\Tower.cpp" />
+    <ClCompile Include="source files\UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,31 +195,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Text Include="map1.txt" />
-    <Text Include="map2.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="ConsoleSetting.h" />
-    <ClInclude Include="Cpoint.h" />
-    <ClInclude Include="Ctool.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="oclConsole.h" />
-    <ClInclude Include="Tower.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="ConsoleSetting.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Cpoint.cpp" />
-    <ClCompile Include="Ctool.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="MouseControl.cpp" />
-    <ClCompile Include="Tower.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
