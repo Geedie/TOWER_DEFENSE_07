@@ -1,4 +1,4 @@
-﻿#include "Enemy.h"
+﻿#include "../header files/Enemy.h"
 
 int Enemy::XEne() const { return x; }
 int Enemy::YEne() const { return y; }

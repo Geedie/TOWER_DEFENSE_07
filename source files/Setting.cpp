@@ -1,4 +1,4 @@
-#include "Setting.h"
+#include "../header files/Setting.h"
 
 // Draws a box with text from a file at specified coordinates.
 void drawBoxSetting(const char* filename, int width, int posX, int posY, bool isSelected) {

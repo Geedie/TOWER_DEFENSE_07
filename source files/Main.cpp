@@ -1,9 +1,9 @@
-﻿#include "Map.h"
-#include "Ctool.h"
-#include "Bullet.h"
-#include "Tower.h"
-#include "Enemy.h"
-#include "ConsoleSetting.h"
+﻿#include "../header files/Map.h"
+#include "../header files/Ctool.h"
+#include "../header files/Bullet.h"
+#include "../header files/Tower.h"
+#include "../header files/Enemy.h"
+#include "../header files/ConsoleSetting.h"
 
 mutex screenMutex;
 
@@ -113,77 +113,77 @@ void setupEnemies(vector<Enemy>& enemies, int level, const vector<pair<int, int>
     }
 }
 
-int main() {
-    ConsoleSetting setting;
-    setting.ShowScrollbar(false);
-    setting.SetBufferSize(180, 45);
-    setting.SetWindowSize(180, 45);
-    Ctool::setLocale();
-    int level = 1;
-    Map a;
-    int n;
-    cout << "Nhap vao map ban muon choi: map1, map2, map3, map4: ";
-    cin >> n;
-    a.DisplayMap(n);
-    vector<pair<int, int>> path;
-    Tower tower(TOWER_X, TOWER_Y);
-    int x, y;
-    if (n == 1) {
-        x = 99;
-        y = 1;
-        path = { {99, 1}, {99, 10}, {39, 10}, {39, 31}, {122, 31}, {SCREEN_WIDTH - 1, 0} };
-    }
-    if (n == 2) {
-        x = 1;
-        y = 5;
-        path = { {1, 5}, {90, 5}, {90, 19}, {133, 19}, {133, 23}, {SCREEN_WIDTH - 1, 0} };
-    }
-    if (n == 3) {
-        x = 1;
-        y = 6;
-        path = { {1, 30}, {47, 30}, {47, 8}, {75, 8}, {75, 13}, {119, 13}, {SCREEN_WIDTH - 1, 0} };
-    }
-    if (n == 4) {
-        x = 1;
-        y = 6;
-        path = { {1, 6}, {103, 6}, {103, 30}, {30, 30}, {SCREEN_WIDTH - 1, 0} };
-    }
-
-    while (true) {
-        vector<Enemy> enemies;
-        setupEnemies(enemies, level, path, x, y);
-
-        if (!startNewLevel(level)) break;
-
-        while (true) {
-            bool allEnemiesDefeated = true;
-
-            for (auto& enemy : enemies) {
-                if (enemy.Alive()) {
-                    enemy.moveEnemy();
-                    allEnemiesDefeated = false;
-                }
-            }
-
-            for (auto& enemy : enemies) {
-                if (enemy.Alive()) {
-                    tower.shoot(enemy);
-                }
-            }
-
-
-            checkCollisions(enemies, tower);
-            drawScreen(enemies, tower, path);
-            tower.updateBullets();
-            if (allEnemiesDefeated) {
-                setCursorPosition(0, TOWER_Y + 2);
-                wcout << "All enemies defeated! Level " << level << " completed!" << endl;
-                level++;
-                break;
-            }
-
-            this_thread::sleep_for(chrono::milliseconds(200 - level * 20));
-        }
-    }
-    return 0;
-}
+//int main() {
+//    ConsoleSetting setting;
+//    setting.ShowScrollbar(false);
+//    setting.SetBufferSize(180, 45);
+//    setting.SetWindowSize(180, 45);
+//    ctool::setLocale();
+//    int level = 1;
+//    Map a;
+//    int n;
+//    cout << "Nhap vao map ban muon choi: map1, map2, map3, map4: ";
+//    cin >> n;
+//    a.DisplayMap(n);
+//    vector<pair<int, int>> path;
+//    Tower tower(TOWER_X, TOWER_Y);
+//    int x, y;
+//    if (n == 1) {
+//        x = 99;
+//        y = 1;
+//        path = { {99, 1}, {99, 10}, {39, 10}, {39, 31}, {122, 31}, {SCREEN_WIDTH - 1, 0} };
+//    }
+//    if (n == 2) {
+//        x = 1;
+//        y = 5;
+//        path = { {1, 5}, {90, 5}, {90, 19}, {133, 19}, {133, 23}, {SCREEN_WIDTH - 1, 0} };
+//    }
+//    if (n == 3) {
+//        x = 1;
+//        y = 6;
+//        path = { {1, 30}, {47, 30}, {47, 8}, {75, 8}, {75, 13}, {119, 13}, {SCREEN_WIDTH - 1, 0} };
+//    }
+//    if (n == 4) {
+//        x = 1;
+//        y = 6;
+//        path = { {1, 6}, {103, 6}, {103, 30}, {30, 30}, {SCREEN_WIDTH - 1, 0} };
+//    }
+//
+//    while (true) {
+//        vector<Enemy> enemies;
+//        setupEnemies(enemies, level, path, x, y);
+//
+//        if (!startNewLevel(level)) break;
+//
+//        while (true) {
+//            bool allEnemiesDefeated = true;
+//
+//            for (auto& enemy : enemies) {
+//                if (enemy.Alive()) {
+//                    enemy.moveEnemy();
+//                    allEnemiesDefeated = false;
+//                }
+//            }
+//
+//            for (auto& enemy : enemies) {
+//                if (enemy.Alive()) {
+//                    tower.shoot(enemy);
+//                }
+//            }
+//
+//
+//            checkCollisions(enemies, tower);
+//            drawScreen(enemies, tower, path);
+//            tower.updateBullets();
+//            if (allEnemiesDefeated) {
+//                setCursorPosition(0, TOWER_Y + 2);
+//                wcout << "All enemies defeated! Level " << level << " completed!" << endl;
+//                level++;
+//                break;
+//            }
+//
+//            this_thread::sleep_for(chrono::milliseconds(200 - level * 20));
+//        }
+//    }
+//    return 0;
+//}

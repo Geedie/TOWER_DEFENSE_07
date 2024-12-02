@@ -1,4 +1,4 @@
-#include "Menu.h"
+#include "../header files/Menu.h"
 
 // Draws a box with text from a file at specified coordinates.
 void drawBox(const char* filename, int width, int posX, int posY, bool isSelected) {

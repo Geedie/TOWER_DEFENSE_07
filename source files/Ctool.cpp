@@ -1,4 +1,4 @@
-﻿#include "ctool.h"
+﻿#include "../header files/ctool.h"
 mutex ctool::mtx;
 void ctool::ShowConsoleCursor(bool showFlag) {
 	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);

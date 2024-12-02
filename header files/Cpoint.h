@@ -1,4 +1,4 @@
-class Cpoint {
+class cpoint {
 public:
 	// Constants and data
 	const static int MAP_SIZE = 200;// Map matrix size
@@ -7,12 +7,12 @@ public:
 private:
 	int x, y, c;
 public:
-	Cpoint() { x = y = c = 0; }
-	Cpoint(int tx, int ty, int tc) { x = tx;y = ty;c = tc; }
+	cpoint() { x = y = c = 0; }
+	cpoint(int tx, int ty, int tc) { x = tx;y = ty;c = tc; }
 	int getX() { return x; }
 	int getY() { return y; }
 	int getC() { return c; }
 	void setC(int tc) { c = tc; }
-	static Cpoint fromXYToRowCol(Cpoint v);
-	static Cpoint fromRowColToXY(Cpoint s);
+	static cpoint fromXYToRowCol(cpoint v);
+	static cpoint fromRowColToXY(cpoint s);
 };

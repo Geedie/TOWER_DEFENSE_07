@@ -1,4 +1,4 @@
-﻿#include "Tower.h"
+﻿#include "../header files/Tower.h"
 
 // Bắn đạn nếu kẻ địch trong tầm bắn
 void Tower::shoot(Enemy& enemy) {

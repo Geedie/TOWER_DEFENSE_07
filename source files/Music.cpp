@@ -1,4 +1,4 @@
-#include "Music.h"
+#include "../header files/Music.h"
 
 void drawMusicTitle(int width, int posX, int posY) {
 	COORD coord = { static_cast<SHORT>(posX), static_cast<SHORT>(posY) };

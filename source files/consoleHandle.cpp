@@ -1,4 +1,4 @@
-#include "consoleHandle.h"
+#include "../header files/consoleHandle.h"
 
 // Retrieves the width of the console window.
 int getConsoleWidth() {
