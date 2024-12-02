@@ -48,7 +48,7 @@ backMenu:
                     goto backMenu;
                     break;
                 case 1:
-                    //newGame();
+                    newGame();
                     break;
                 default:
                     break;

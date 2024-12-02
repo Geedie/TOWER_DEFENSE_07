@@ -30,6 +30,7 @@
     <ClInclude Include="header files\ctool.h" />
     <ClInclude Include="header files\ctower.h" />
     <ClInclude Include="header files\Enemy.h" />
+    <ClInclude Include="header files\MainGame.h" />
     <ClInclude Include="header files\Map.h" />
     <ClInclude Include="header files\Menu.h" />
     <ClInclude Include="header files\Music.h" />
@@ -74,7 +75,7 @@
     <ClCompile Include="source files\cpoint.cpp" />
     <ClCompile Include="source files\ctool.cpp" />
     <ClCompile Include="source files\Enemy.cpp" />
-    <ClCompile Include="header files\MainGame.h" />
+    <ClCompile Include="source files\MainGame.cpp" />
     <ClCompile Include="source files\MainPrg.cpp" />
     <ClCompile Include="source files\Map.cpp" />
     <ClCompile Include="source files\Menu.cpp" />

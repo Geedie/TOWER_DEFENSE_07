@@ -65,6 +65,9 @@
     <ClInclude Include="header files\Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header files\MainGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource files\BackgroundMusic.txt" />
@@ -114,7 +117,7 @@
     <ClCompile Include="source files\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="header files\MainGame.h">
+    <ClCompile Include="source files\MainGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source files\Map.cpp">
