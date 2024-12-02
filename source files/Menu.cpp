@@ -48,7 +48,7 @@ void drawTitle(int width, int posX, int posY) {
     COORD coord = { static_cast<SHORT>(posX), static_cast<SHORT>(posY) };
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    ifstream file("Menu.txt");
+    ifstream file("resource files/Menu.txt");
 
     string line;
 
@@ -91,10 +91,10 @@ int printOption() {
     HWND consoleWindow = GetConsoleWindow();
 
     // Store file names
-    const char* playFileName = "PlayOpt.txt";
-    const char* settingFileName = "SettingOpt.txt";
-    const char* rankFileName = "RankOpt.txt";
-    const char* exitFileName = "Exit.txt";
+    const char* playFileName = "resource files/PlayOpt.txt";
+    const char* settingFileName = "resource files/SettingOpt.txt";
+    const char* rankFileName = "resource files/RankOpt.txt";
+    const char* exitFileName = "resource files/Exit.txt";
 
     // Preload the files at the start
     ifstream playFile(playFileName);

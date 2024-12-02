@@ -46,7 +46,7 @@ void drawBoxSetting(const char* filename, int width, int posX, int posY, bool is
 void drawTitleSetting(int width, int posX, int posY) {
     COORD coord = { static_cast<SHORT>(posX), static_cast<SHORT>(posY) };
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    ifstream file("Setting.txt");
+    ifstream file("resource files/Setting.txt");
 
     // Read and draw each line from the file
     string line;
@@ -96,9 +96,9 @@ int printOptionSetting() {
             bool drawBackToMenu = (x >= positionX - 17 && x <= positionX + boxWidth - 4 && y > startY + 7 && y < startY + 14);
 
             // Draw options
-            drawBoxSetting("Music.txt", boxWidth - 8, positionX + 3, startY - 8, drawMusic);
-            drawBoxSetting("Graphics.txt", boxWidth + 4, positionX - 3, startY, drawGraphics);
-            drawBoxSetting("BackToMenu.txt", boxWidth + 16, positionX - 8, startY + 8, drawBackToMenu);
+            drawBoxSetting("resource files/Music.txt", boxWidth - 8, positionX + 3, startY - 8, drawMusic);
+            drawBoxSetting("resource files/Graphics.txt", boxWidth + 4, positionX - 3, startY, drawGraphics);
+            drawBoxSetting("resource files/BackToMenu.txt", boxWidth + 16, positionX - 8, startY + 8, drawBackToMenu);
 
             // Handle left button click for Back to Menu
             if (drawBackToMenu && (GetAsyncKeyState(VK_LBUTTON) & 0x8000)) {

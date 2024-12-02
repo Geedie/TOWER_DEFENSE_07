@@ -42,10 +42,11 @@ void printImageToConsole(const char* filename, int x, int y, ConsoleColor bgColo
 
 void printRankingBoard()
 {
+	system("cls");
 	ctool::setConsoleBackgroundColor(Cyan);
 
 
-	printImageToConsole("../resource files/RankingTitle.txt", 40, 1, Cyan, Black);
+	printImageToConsole("resource files/RankingTitle.txt", 40, 1, Cyan, Black);
 
 	ctool::GotoXY(0, 8);
 	for (int i = 0; i < 120; i++)
@@ -77,11 +78,11 @@ void printRankingBoard()
 				ctool::setColor(Green, DarkMagenta);
 
 				ctool::GotoXY(1, 1);
-				wcout << L"╔══════════════╗";
+				wcout << L"                ";
 				ctool::GotoXY(1, 2);
-				wcout << L"║ Back to Menu ║";
+				wcout << L"  Back to Menu  ";
 				ctool::GotoXY(1, 3);
-				wcout << L"╚══════════════╝";
+				wcout << L"                ";
 
 				if (GetAsyncKeyState(VK_LBUTTON) & 0x8000) // Kiểm tra click chuột
 				{
@@ -92,11 +93,11 @@ void printRankingBoard()
 				ctool::setColor(LightGray, DarkMagenta);
 
 				ctool::GotoXY(1, 1);
-				wcout << L"╔══════════════╗";
+				wcout << L"                ";
 				ctool::GotoXY(1, 2);
-				wcout << L"║ Back to Menu ║";
+				wcout << L"  Back to Menu  ";
 				ctool::GotoXY(1, 3);
-				wcout << L"╚══════════════╝";
+				wcout << L"                ";
 			}
 		}
 	}
@@ -118,11 +119,11 @@ int printGameModeOption() {
 
 	ctool::setConsoleBackgroundColor(Cyan);
 
-	printImageToConsole("../resource files/GameModeTitle.txt", 40, 1, Cyan, DarkRed);
+	printImageToConsole("resource files/GameModeTitle.txt", 40, 1, Cyan, DarkRed);
 
-	printImageToConsole("../resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta); // Tọa độ (60, 10) -> (79, 14)
-	printImageToConsole("../resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);// (60, 16) -> (87, 20)
-	printImageToConsole("../resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta); // (60, 22) -> (79, 26)
+	printImageToConsole("resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta); // Tọa độ (60, 10) -> (79, 14)
+	printImageToConsole("resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);// (60, 16) -> (87, 20)
+	printImageToConsole("resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta); // (60, 22) -> (79, 26)
 
 	POINT cursorPos;
 	HWND consoleWindow = GetConsoleWindow();
@@ -144,9 +145,9 @@ int printGameModeOption() {
 
 				// Kiểm tra click chuột trong vùng "Easy"
 				if (x >= 63 && x <= 81 && y >= 10 && y <= 14) {
-					printImageToConsole("../resource files/EasyTitle.txt", 69, 10, Green, DarkMagenta);
-					printImageToConsole("../resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);
-					printImageToConsole("../resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta);
+					printImageToConsole("resource files/EasyTitle.txt", 69, 10, Green, DarkMagenta);
+					printImageToConsole("resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);
+					printImageToConsole("resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta);
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 					{
@@ -156,9 +157,9 @@ int printGameModeOption() {
 				}
 				// Kiểm tra click chuột trong vùng "Normal"
 				else if (x >= 60 && x <= 85 && y >= 16 && y <= 20) {
-					printImageToConsole("../resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta);
-					printImageToConsole("../resource files/NormalTitle.txt", 65, 16, Green, DarkMagenta);
-					printImageToConsole("../resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta);
+					printImageToConsole("resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta);
+					printImageToConsole("resource files/NormalTitle.txt", 65, 16, Green, DarkMagenta);
+					printImageToConsole("resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta);
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 					{
@@ -168,9 +169,9 @@ int printGameModeOption() {
 				}
 				// Kiểm tra click chuột trong vùng "Hard"
 				else if (x >= 63 && x <= 81 && y >= 22 && y <= 26) {
-					printImageToConsole("../resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta);
-					printImageToConsole("../resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);
-					printImageToConsole("../resource files/HardTitle.txt", 69, 22, Green, DarkMagenta);
+					printImageToConsole("resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta);
+					printImageToConsole("resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);
+					printImageToConsole("resource files/HardTitle.txt", 69, 22, Green, DarkMagenta);
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 					{
@@ -180,9 +181,9 @@ int printGameModeOption() {
 				}
 				else
 				{
-					printImageToConsole("../resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta); // Tọa độ (60, 10) -> (79, 14)
-					printImageToConsole("../resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);// (60, 16) -> (87, 20)
-					printImageToConsole("../resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta); // (60, 22) -> (79, 26)
+					printImageToConsole("resource files/EasyTitle.txt", 69, 10, Yellow, DarkMagenta); // Tọa độ (60, 10) -> (79, 14)
+					printImageToConsole("resource files/NormalTitle.txt", 65, 16, Yellow, DarkMagenta);// (60, 16) -> (87, 20)
+					printImageToConsole("resource files/HardTitle.txt", 69, 22, Yellow, DarkMagenta); // (60, 22) -> (79, 26)
 				}
 
 				// In ra màn hình console nút Back to menu, cho phép người chơi quay trở lại giao diện menu
@@ -190,11 +191,11 @@ int printGameModeOption() {
 					ctool::setColor(Green, DarkMagenta);
 
 					ctool::GotoXY(1, 1);
-					wcout << L"╔══════════════╗";
+					wcout << L"                ";
 					ctool::GotoXY(1, 2);
-					wcout << L"║ Back to Menu ║";
+					wcout << L"  Back to Menu  ";
 					ctool::GotoXY(1, 3);
-					wcout << L"╚══════════════╝";
+					wcout << L"                ";
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000) // Kiểm tra click chuột
 					{
@@ -207,11 +208,11 @@ int printGameModeOption() {
 					ctool::setColor(LightGray, DarkMagenta);
 
 					ctool::GotoXY(1, 1);
-					wcout << L"╔══════════════╗";
+					wcout << L"                ";
 					ctool::GotoXY(1, 2);
-					wcout << L"║ Back to Menu ║";
+					wcout << L"  Back to Menu  ";
 					ctool::GotoXY(1, 3);
-					wcout << L"╚══════════════╝";
+					wcout << L"                ";
 				}
 			}
 			Sleep(50);  // Giảm tải CPU
@@ -253,11 +254,11 @@ int printGameModeOption() {
 				if (x >= 62 && x <= 68 && y >= 32 && y <= 34) {
 					ctool::setColor(Green, Black);
 					ctool::GotoXY(68, 32);
-					wcout << L"╔═════╗";
+					wcout << L"       ";
 					ctool::GotoXY(68, 33);
-					wcout << L"║ YES ║";
+					wcout << L"  YES  ";
 					ctool::GotoXY(68, 34);
-					wcout << L"╚═════╝";
+					wcout << L"       ";
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 					{
@@ -267,11 +268,11 @@ int printGameModeOption() {
 				else if (x >= 73 && x <= 79 && y >= 32 && y <= 34) {
 					ctool::setColor(Green, Black);
 					ctool::GotoXY(80, 32);
-					wcout << L"╔═════╗";
+					wcout << L"       ";
 					ctool::GotoXY(80, 33);
-					wcout << L"║ NO  ║";
+					wcout << L"  NO   ";
 					ctool::GotoXY(80, 34);
-					wcout << L"╚═════╝";
+					wcout << L"       ";
 
 					if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 					{
@@ -289,18 +290,18 @@ int printGameModeOption() {
 					ctool::setColor(LightGray, Black);
 
 					ctool::GotoXY(68, 32);
-					wcout << L"╔═════╗";
+					wcout << L"       ";
 					ctool::GotoXY(68, 33);
-					wcout << L"║ YES ║";
+					wcout << L"  YES  ";
 					ctool::GotoXY(68, 34);
-					wcout << L"╚═════╝";
+					wcout << L"       ";
 
 					ctool::GotoXY(80, 32);
-					wcout << L"╔═════╗";
+					wcout << L"       ";
 					ctool::GotoXY(80, 33);
-					wcout << L"║ NO  ║";
+					wcout << L"  NO   ";
 					ctool::GotoXY(80, 34);
-					wcout << L"╚═════╝";
+					wcout << L"       ";
 				}
 			}
 		}
@@ -320,10 +321,10 @@ int printPlayMenu()
 
 	ctool::setConsoleBackgroundColor(Cyan);
 
-	printImageToConsole("../resource files/PlayTitle.txt", 60, 1, Cyan, DarkRed);
+	printImageToConsole("resource files/PlayTitle.txt", 60, 1, Cyan, DarkRed);
 
-	printImageToConsole("../resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
-	printImageToConsole("../resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
+	printImageToConsole("resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
+	printImageToConsole("resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
 
 	POINT cursorPos;
 	HWND consoleWindow = GetConsoleWindow();
@@ -336,8 +337,8 @@ int printPlayMenu()
 			int y = cursorPos.y / 16; // 16 là giả định về kích cỡ ký tự dọc
 
 			if (x >= 18 && x <= 63 && y >= 10 && y <= 24) {
-				printImageToConsole("../resource files/PlayNewTitle.txt", 20, 10, Green, DarkMagenta);
-				printImageToConsole("../resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
+				printImageToConsole("resource files/PlayNewTitle.txt", 20, 10, Green, DarkMagenta);
+				printImageToConsole("resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
 
 				if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 				{
@@ -346,8 +347,8 @@ int printPlayMenu()
 				}
 			}
 			else if (x >= 73 && x <= 124 && y >= 10 && y <= 24) {
-				printImageToConsole("../resource files/PlayRecentTitle.txt", 80, 10, Green, DarkMagenta);
-				printImageToConsole("../resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
+				printImageToConsole("resource files/PlayRecentTitle.txt", 80, 10, Green, DarkMagenta);
+				printImageToConsole("resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
 
 				if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 				{
@@ -356,8 +357,8 @@ int printPlayMenu()
 				}
 			}
 			else {
-				printImageToConsole("../resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
-				printImageToConsole("../resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
+				printImageToConsole("resource files/PlayNewTitle.txt", 20, 10, Yellow, DarkMagenta);
+				printImageToConsole("resource files/PlayRecentTitle.txt", 80, 10, Yellow, DarkMagenta);
 			}
 
 			// In ra màn hình console nút Back to menu, cho phép người chơi quay trở lại giao diện menu
@@ -365,11 +366,11 @@ int printPlayMenu()
 				ctool::setColor(Green, DarkMagenta);
 
 				ctool::GotoXY(1, 1);
-				wcout << L"╔══════════════╗";
+				wcout << L"                ";
 				ctool::GotoXY(1, 2);
-				wcout << L"║ Back to Menu ║";
+				wcout << L"  Back to Menu  ";
 				ctool::GotoXY(1, 3);
-				wcout << L"╚══════════════╝";
+				wcout << L"                ";
 
 				if (GetAsyncKeyState(VK_LBUTTON) & 0x8000) // Kiểm tra click chuột
 				{
@@ -381,11 +382,11 @@ int printPlayMenu()
 				ctool::setColor(LightGray, DarkMagenta);
 
 				ctool::GotoXY(1, 1);
-				wcout << L"╔══════════════╗";
+				wcout << L"                ";
 				ctool::GotoXY(1, 2);
-				wcout << L"║ Back to Menu ║";
+				wcout << L"  Back to Menu  ";
 				ctool::GotoXY(1, 3);
-				wcout << L"╚══════════════╝";
+				wcout << L"                ";
 			}
 		}
 
@@ -397,48 +398,48 @@ int printPlayMenu()
 	return selectedOption;
 }
 
-int main()
-{
-	ctool::setLocale();
-	//ctool::resizeConsole(1400, 800);
-	ctool::ShowConsoleCursor(false);
-
-	ConsoleSetting setting;
-	setting.ShowScrollbar(false);
-	setting.SetBufferSize(180, 45);
-	setting.SetWindowSize(180, 45);
-
-	PlaySound(TEXT("../resource files/BgSound.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
-
-	//printRankingBoard();
-
-	/*while (true)
-	{*/
-		switch (printPlayMenu())
-		{
-		case 1:
-			switch (printGameModeOption())
-			{
-			case 1:
-				PlaySound(NULL, 0, 0);
-				printRankingBoard();
-				break;
-			default:
-				break;
-			}
-
-			//cout << printGameModeOption();
-			break;
-		case 2:
-			break;
-		default:
-			break;
-		}
-	/*}*/
-	
-	
-	
-	
-	ctool::setColor(Black, LightGray);
-	return 0;
-}
+//int main()
+//{
+//	ctool::setLocale();
+//	//ctool::resizeConsole(1400, 800);
+//	ctool::ShowConsoleCursor(false);
+//
+//	ConsoleSetting setting;
+//	setting.ShowScrollbar(false);
+//	setting.SetBufferSize(180, 45);
+//	setting.SetWindowSize(180, 45);
+//
+//	PlaySound(TEXT("resource files/BgSound.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+//
+//	//printRankingBoard();
+//
+//	/*while (true)
+//	{*/
+//		switch (printPlayMenu())
+//		{
+//		case 1:
+//			switch (printGameModeOption())
+//			{
+//			case 1:
+//				PlaySound(NULL, 0, 0);
+//				printRankingBoard();
+//				break;
+//			default:
+//				break;
+//			}
+//
+//			//cout << printGameModeOption();
+//			break;
+//		case 2:
+//			break;
+//		default:
+//			break;
+//		}
+//	/*}*/
+//	
+//	
+//	
+//	
+//	ctool::setColor(Black, LightGray);
+//	return 0;
+//}

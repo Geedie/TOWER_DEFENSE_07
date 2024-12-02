@@ -114,7 +114,7 @@
     <ClCompile Include="source files\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source files\Main.cpp">
+    <ClCompile Include="header files\MainGame.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source files\Map.cpp">
@@ -139,6 +139,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source files\UI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source files\MainPrg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -11,7 +11,7 @@ void Map::ResizeConsole(int row, int col) {
 }
 
 void Map::Inputmap() {
-    ifstream file("map1.txt");  // Mở file map.txt
+    ifstream file("resource files/map1.txt");  // Mở file map.txt
 
     // Kiểm tra nếu file mở thành công
     if (!file.is_open()) {

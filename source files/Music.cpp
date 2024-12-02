@@ -4,7 +4,7 @@ void drawMusicTitle(int width, int posX, int posY) {
 	COORD coord = { static_cast<SHORT>(posX), static_cast<SHORT>(posY) };
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	ifstream file("MusicTitle.txt");
+	ifstream file("resource files/MusicTitle.txt");
 
 	string line;
 
@@ -89,7 +89,7 @@ void printBackgroundMusic(bool& MusicOn) {
 
 	HWND consoleWindow = GetConsoleWindow();
 
-	drawBackgroundMusicBox("BackgroundMusic.txt", boxWidth + 12, positionX - 36, startY - 8, true, false);
+	drawBackgroundMusicBox("resource files/BackgroundMusic.txt", boxWidth + 12, positionX - 36, startY - 8, true, false);
 
 	bool leftButtonPressed = false;
 	bool isSelected = true;
@@ -109,15 +109,15 @@ void printBackgroundMusic(bool& MusicOn) {
 			bool isOffHighlighted = (x > positionX + 22 && x < positionX + 36 && y > startY - 9 && y < startY - 3);
 			bool isBackHighlighted = (x >= positionX - 16 && x <= positionX + boxWidth - 3 && y > startY + 7 && y < startY + 14);
 
-			drawBackgroundMusicBox("BackToMenu.txt", boxWidth + 16, positionX - 7, startY + 8, isBackHighlighted, false);
+			drawBackgroundMusicBox("resource files/BackToMenu.txt", boxWidth + 16, positionX - 7, startY + 8, isBackHighlighted, false);
 
 			if (MusicOn) {
-				drawBackgroundMusicBox("OnOption.txt", boxWidth - 20, positionX + 24, startY - 8, isOnHighlighted, true);
-				drawBackgroundMusicBox("OffOption.txt", boxWidth - 16, positionX + 36, startY - 8, isOffHighlighted, false);
+				drawBackgroundMusicBox("resource files/OnOption.txt", boxWidth - 20, positionX + 24, startY - 8, isOnHighlighted, true);
+				drawBackgroundMusicBox("resource files/OffOption.txt", boxWidth - 16, positionX + 36, startY - 8, isOffHighlighted, false);
 			}
 			else {
-				drawBackgroundMusicBox("OnOption.txt", boxWidth - 20, positionX + 24, startY - 8, isOnHighlighted, false);
-				drawBackgroundMusicBox("OffOption.txt", boxWidth - 16, positionX + 36, startY - 8, isOffHighlighted, true);
+				drawBackgroundMusicBox("resource files/OnOption.txt", boxWidth - 20, positionX + 24, startY - 8, isOnHighlighted, false);
+				drawBackgroundMusicBox("resource files/OffOption.txt", boxWidth - 16, positionX + 36, startY - 8, isOffHighlighted, true);
 			}
 
 			// Handle left button click only for the settings box
@@ -125,7 +125,7 @@ void printBackgroundMusic(bool& MusicOn) {
 				if (!leftButtonPressed) { // Only on the first press
 					leftButtonPressed = true;
 					MusicOn = true;
-					PlaySound(TEXT("BgSound.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+					PlaySound(TEXT("resource files/BgSound.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 				}
 			}
 			else {
