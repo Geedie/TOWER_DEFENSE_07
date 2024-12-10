@@ -93,7 +93,7 @@ void checkCollisions(vector<Enemy>& enemies, Tower& tower) {
 
 bool startNewLevel(int level) {
     clearMessage();
-    setCursorPosition(0, SCREEN_HEIGHT + 10);
+    setCursorPosition(0, 45);
     wcout << "Level " << level << " - Press Enter to start.";
     cin.get();
     clearMessage();  // Xóa dòng thông báo sau khi nhấn Enter
